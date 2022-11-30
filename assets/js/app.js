@@ -43,6 +43,8 @@ for (let i = 0; i < lBtns.length; i++) {
             rPara.innerText = `1 ${symbols} = ${(
               1 / Object.values(data.rates)[0]
             ).toFixed(4)} ${lBtns[i].innerText}`;
+            temp = lInp.value * Object.values(data.rates)[0];
+            rInp.value = temp.toFixed(4);
             lInp.addEventListener("keyup", (event) => {
               temp = lInp.value * Object.values(data.rates)[0];
               rInp.value = temp.toFixed(4);
@@ -75,6 +77,8 @@ for (let j = 0; j < rBtns.length; j++) {
             lPara.innerText = `1 ${symbols} = ${(
               1 / Object.values(data.rates)[0]
             ).toFixed(4)} ${rBtns[j].innerText}`;
+            temp = rInp.value * Object.values(data.rates)[0];
+            lInp.value = temp.toFixed(4);
             rInp.addEventListener("keyup", (event) => {
               temp = rInp.value * Object.values(data.rates)[0];
               lInp.value = temp.toFixed(4);
